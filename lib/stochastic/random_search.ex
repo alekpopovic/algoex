@@ -1,19 +1,5 @@
 defmodule Algoex.Stochastic.RandomSearch do
-
-  # Input: NumIterations, ProblemSize
-  #
-  # Output: Best
-  #
-  # Best ←∅;
-  #
-  # foreach iteri ∈NumIterations do
-  #   candidatei ←RandomSolution(ProblemSize, SearchSpace);
-  #   if Cost(candidatei) < Cost(Best) then
-  #     Best ←candidatei;
-  #   end
-  # end
-  #
-  #return Best;
+  @spec perform(integer(), integer()) :: :ok
   def perform(max_iter, problem_size) do
     search_space = Enum.map(1..problem_size, fn _ -> {-5, 5} end)
 
